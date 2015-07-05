@@ -10,6 +10,9 @@
 html {
   font-family: 'Roboto Slab', serif;
 }
+body {
+  background-color: #EEEEEE;
+}
 
 [layout=row] {
   flex-direction: row;
@@ -51,9 +54,23 @@ html {
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-72 { font-size: 72px; }
 
 .text-center {
   text-align: center;
+}
+
+.Login-Header {
+  background-image: url('../assets/images/login-header2.jpg');
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center top;
+  font-size: 6em;
 }
 
 /**
