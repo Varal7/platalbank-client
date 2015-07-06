@@ -11,7 +11,10 @@ html {
   font-family: 'Roboto Slab', serif;
 }
 body {
-  background-color: #EEEEEE;
+
+  background-color: #FEEEEE;
+  background-image:url(../assets/images/conscrit.jpg);
+  background-size:cover;
 }
 
 [layout=row] {
@@ -65,7 +68,7 @@ body {
 }
 
 .Login-Header {
-  background-image: url('../assets/images/login-header2.jpg');
+  background-image: url('../assets/images/login-header3.png');
   text-align: center;
   color: white;
   background-size: cover;

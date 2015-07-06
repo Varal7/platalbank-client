@@ -10,7 +10,7 @@
     // Enable log
     $logProvider.debugEnabled(true);
     $mdThemingProvider.theme('default')
-    .primaryPalette('light-blue')
+    .primaryPalette('indigo')
     .accentPalette('amber');
   }
 
