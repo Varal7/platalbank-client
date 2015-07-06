@@ -1,24 +1,26 @@
-<div layout="row">
-  <md-card flex-gt-sm="33" flex-sm offset-gt-sm="33">
-    <div class="Login-Header">
-      <i class="material-icons md-72">credit_card</i>
-    </div>
-    <md-card-content>
-      <form name="loginForm">
-        <md-input-container class="md-icon-float">
-          <label for="email">Adresse email</label>
-          <md-icon md-font-set="material-icons">email</md-icon>
-          <input name="email" ng-model="login.email" required type="email">
-        </md-input-container>
-        <md-input-container class="md-icon-float">
-          <label>Mot de passe</label>
-          <md-icon md-font-set="material-icons">lock</md-icon>
-          <input name="password" ng-model="login.password" required type="password">
-        </md-input-container>
-      </form>
-    </md-card-content>
-    <div class="md-actions" layout="row" layout-align="center center">
-      <md-button class="md-primary md-raised">Connexion</md-button>
-    </div>
-  </md-card>
+<div class="vertical-center">
+  <div layout="row">
+    <md-card flex-gt-sm="33" flex-sm offset-gt-sm="33">
+      <div class="Login-Header">
+        <i class="material-icons md-72">credit_card</i>
+      </div>
+      <md-card-content>
+        <form name="loginForm">
+          <md-input-container class="md-icon-float">
+            <label for="email">Adresse email</label>
+            <md-icon md-font-set="material-icons">email</md-icon>
+            <input name="email" ng-model="login.email" required type="email">
+          </md-input-container>
+          <md-input-container class="md-icon-float">
+            <label>Mot de passe</label>
+            <md-icon md-font-set="material-icons">lock</md-icon>
+            <input name="password" ng-model="login.password" required type="password">
+          </md-input-container>
+        </form>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="center center">
+        <md-button class="md-primary md-raised">Connexion</md-button>
+      </div>
+    </md-card>
+  </div>
 </div>
