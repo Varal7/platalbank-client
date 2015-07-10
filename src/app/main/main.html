@@ -1,16 +1,13 @@
-<div layout="vertical" layout-fill>
+<div layout="row" >
+    <div flex="100" >
+      <header />
+    </div>
+</div>
 
-  <md-content>
-    <header>
+<div layout="row" >
+    <div flex="25">
       <acme-navbar />
-    </header>
-
-    <section class="jumbotron">
-      <h1>PlatalBank</h1>
-      <p>
-        With ♥ by le BR <i class="material-icons">credit_card</i>
-      </p>
-    </section>
-  </md-content>
-
+    </div>
+    <div flex ui-view>
+    </div>
 </div>
