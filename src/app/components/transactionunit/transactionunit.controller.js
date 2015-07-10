@@ -3,10 +3,10 @@
 
   angular
     .module('platalbankClient')
-    .controller('TransactionController', Transaction);
+    .controller('TransactionunitController', TransactionunitController);
 
   /** @ngInject */
-  function TransactionController() {
+  function TransactionunitController() {
     var _this = this;
   }
 })();
