@@ -10,19 +10,13 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/header/header.html',
-      controller: HeaderController,
-      controllerAs: 'vm',
+      controller: 'HeaderController',
+      controllerAs: 'header',
       bindToController: true
     };
 
     return directive;
-    /** @ngInject */
-    function HeaderController(moment) {
-      var vm = this;
 
-      // "vm.creation" is avaible by directive option "bindToController: true"
-
-    }
 
   }
 
