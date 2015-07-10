@@ -1,7 +1,6 @@
 <md-content>
 <md-list>
 
-<md-subheader> Menu </md-subheader>
   <md-list-item class = "md-1-line">
 
       <md-button>
@@ -15,13 +14,14 @@
     <md-icon md-font-set="material-icons">star_rate</md-icon>
   Binets</md-button>
 
-   <md-list-item class = "md-1-line" ng-repeat="binet in binets">
+   <md-list-item class = "md-1-line" ng-repeat="binet in navbar.binets">
   <md-button>  
+
      <img ng-src="" class="md-avatar" alt="" /> <!--Logo du Binet-->
     <div class="md-list-item-text"> 
       
-      <big>{{binet.Trigram.name}}</big>-{{binet.Trigram.money}}
-    
+      <big>{{binet.trigramme}}</big>-{{binet.solde}}
+
     </div>
     </md-button>
   </md-list-item>

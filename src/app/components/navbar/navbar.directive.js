@@ -3,18 +3,19 @@
 
   angular
     .module('platalbankClient')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('navbar', navbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function navbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
-          creationDate: '='
+
+
       },
       controller: NavbarController,
-      controllerAs: 'vm',
+      controllerAs: 'navbar',
       bindToController: true
     };
 
@@ -22,10 +23,10 @@
 
     /** @ngInject */
     function NavbarController(moment) {
-      var vm = this;
+      var _this= this;
 
-      // "vm.creation" is avaible by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow();
+      _this.binets=[{trigramme: 'BOB', solde:'2000'},{trigramme:'BB', solde:'20'}];
+
     }
   }
 
