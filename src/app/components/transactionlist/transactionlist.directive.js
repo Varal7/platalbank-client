@@ -11,7 +11,7 @@
       restrict: 'E',
       templateUrl: 'app/components/transactionlist/transactionlist.html',
       controller: 'TransactionlistController',
-      controllerAs: 'transactionlist',
+      controllerAs: 'tl',
       bindToController: true
     };
 

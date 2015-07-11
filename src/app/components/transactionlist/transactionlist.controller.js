@@ -3,12 +3,12 @@
 
   angular
     .module('platalbankClient')
-    .controller('TransactionlistController', ['$scope', TransactionlistController]);
+    .controller('TransactionlistController', TransactionlistController);
 
   /** @ngInject */
   function TransactionlistController($scope) {
     var _this = this;
-    $scope.transactions = [
+    this.transactions = [
       {
         name: "Aujourd'hui",
         transactions: [
