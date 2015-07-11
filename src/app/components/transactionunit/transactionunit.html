@@ -1,4 +1,4 @@
-<md-list-item class="md-3-line">
+<md-list-item class="md-3-line" ng-click="clickMe($event)" class="hide">
     <img ng-src="User photo" class="md-avatar" alt="User name" />
     <div flex>
         <div class="md-list-item-text">
@@ -6,19 +6,25 @@
             <h4>Date</h4>
             <p>Créé par User</p>
         </div>
+        <div class="show-hide">
+            Operation details
+        </div>
     </div>
     <div flex="5">
         <md-button class="md-raised md-primary">Montant gagné</md-button>
     </div>
 </md-list-item>
 <md-divider></md-divider>
-<md-list-item class="md-3-line">
+<md-list-item class="md-3-line" ng-click="clickMe($event)" class="hide">
     <img ng-src="Event.Binet photo" class="md-avatar" alt="Event.Binet name" />
     <div flex>
         <div class="md-list-item-text">
             <h3>Name</h3>
             <h4>Date</h4>
             <p>Créé par Event.Binet pour Event.Name</p>
+        </div>
+        <div class="show-hide">
+            Operation details
         </div>
     </div flex>
     <div flex="5">
