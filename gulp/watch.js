@@ -3,6 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var watch = require('gulp-watch');
 
 var browserSync = require('browser-sync');
 
@@ -12,9 +13,9 @@ function isOnlyChange(event) {
 
 gulp.task('watch', ['inject'], function () {
 
-  gulp.watch([path.join(conf.paths.src, '/*.html'), 'bower.json'], ['inject']);
+  watch([path.join(conf.paths.src, '/*.html'), 'bower.json'], ['inject']);
 
-  gulp.watch([
+  watch([
     path.join(conf.paths.src, '/app/**/*.css'),
     path.join(conf.paths.src, '/app/**/*.scss')
   ], function(event) {
@@ -25,7 +26,7 @@ gulp.task('watch', ['inject'], function () {
     }
   });
 
-  gulp.watch(path.join(conf.paths.src, '/app/**/*.js'), function(event) {
+  watch(path.join(conf.paths.src, '/app/**/*.js'), function(event) {
     if(isOnlyChange(event)) {
       gulp.start('scripts');
     } else {
@@ -33,7 +34,7 @@ gulp.task('watch', ['inject'], function () {
     }
   });
 
-  gulp.watch(path.join(conf.paths.src, '/app/**/*.html'), function(event) {
+  watch(path.join(conf.paths.src, '/app/**/*.html'), function(event) {
     browserSync.reload(event.path);
   });
 });
