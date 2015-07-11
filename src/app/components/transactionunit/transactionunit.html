@@ -13,6 +13,6 @@
     </div>
   </div>
   <div flex="10">
-    <md-button class="md-raised" ng-class="{ mdPrimary: t.amount >= 0, mdWarn: t.amount < 0 }">{{ t.amount }}</md-button>
+    <md-button class="md-raised" ng-class="t.amount >= 0 ? 'md-primary' : 'md-warn'">{{ t.amount }}</md-button>
   </div>
 </md-list-item>
