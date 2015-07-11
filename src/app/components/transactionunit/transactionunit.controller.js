@@ -8,13 +8,14 @@
   /** @ngInject */
   function TransactionunitController($scope) {
     var _this = this;
-    var displayed = undefined;
-    $scope.clickMe = function(event) {
-      if (displayed) {
-        displayed.classList.remove("show");
-      }
-      displayed = event.target;
-      displayed.classList.add("show");
+    var shown = undefined;
+    $scope.toggleDisplay = function(event) {
+      console.log("Showing this event:");
+      console.log(event);
+      event.target.showme = !event.target.showme;
+      if (shown && shown.showme) // Inside an if so as to allow to close all transactions
+        shown.showme = false;
+      shown = event.target;
     }
   }
 })();
