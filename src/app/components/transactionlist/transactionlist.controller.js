@@ -45,7 +45,7 @@
               creatorPic: "PIC2",
               creator: "Binet Subaïsse",
               name: "Subventions subissance",
-              event_name: "Un évènement très subissant : PlatalBank",
+              eventName: "Un évènement très subissant : PlatalBank",
               date: "Jamais en fait",
               operations: { "Victor Quach": 1337, "Binet Subaïsse": -1337 },
               amount: 1337
