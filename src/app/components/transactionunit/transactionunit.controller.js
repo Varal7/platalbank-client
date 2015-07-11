@@ -8,15 +8,13 @@
   /** @ngInject */
   function TransactionunitController($scope) {
     var _this = this;
+    var displayed = undefined;
     $scope.clickMe = function(event) {
-      console.log(event);
-      if (event.target.classList.contains("hide")) {
-        event.target.classList.remove("hide");
-        event.target.classList.add("show");
-      } else {
-        event.target.classList.remove("show");
-        event.target.classList.add("hide");
+      if (displayed) {
+        displayed.classList.remove("show");
       }
+      displayed = event.target;
+      displayed.classList.add("show");
     }
   }
 })();
