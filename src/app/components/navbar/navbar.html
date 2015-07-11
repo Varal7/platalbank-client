@@ -1,48 +1,27 @@
 <md-content>
-<md-list>
-
-  <md-list-item class = "md-1-line">
-
-      <md-button>
-      <md-icon md-font-set="material-icons">home</md-icon>
-      Accueil
-      </md-button>
-  </md-list-item>
-<md-divider></md-divider>
-
-  <md-button md-ripple-size="full">
-    <md-icon md-font-set="material-icons">star_rate</md-icon>
-  Binets</md-button>
-
-   <md-list-item class = "md-1-line" ng-repeat="binet in navbar.binets">
-  <md-button>  
-
-     <img ng-src="" class="md-avatar" alt="" /> <!--Logo du Binet-->
-    <div class="md-list-item-text"> 
-      
-      <big>{{binet.trigramme}}</big>-{{binet.solde}}
-
-    </div>
-    </md-button>
-  </md-list-item>
-
-
-<md-divider></md-divider>
-
-  <md-list-item class = "md-1-line">
-    <md-button>
-     <md-icon md-font-set="material-icons">settings</md-icon>
-        Préférences
-      </md-button>
-  </md-list-item>
-<md-divider></md-divider>
-   <md-list-item class = "md-1-line">
-      <md-button>
-           <md-icon md-font-set="material-icons">power_settings_new</md-icon>
-           Déconnexion
-      </md-button>
+  <md-list>
+    <md-list-item class="md-1-line" ng-click="Alert()">
+      <div><md-icon md-font-set="material-icons">home</md-icon></div>
+      <div flex offset="15">Accueil</div>
     </md-list-item>
-  
+    <md-list-item class="md-1-line" ng-click="Alert()">
+      <div><md-icon md-font-set="material-icons">star_rate</md-icon></div>
+      <div flex offset="15">Binets</div>
+    </md-list-item>
+      <md-list flex offset="10">
+        <md-list-item class="md-1-line" ng-repeat="binet in navbar.binets" ng-click="Alert()">
+          <div><img width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.name}}" /></div>
+          <div flex offset="10">{{binet.name}}</div>
+          <div class="balance" flex="15">{{binet.balance}}</div>
+        </md-list-item>
+      </md-list>
+    <md-list-item class="md-1-line" ng-click="Alert()">
+      <div><md-icon md-font-set="material-icons">settings</md-icon></div>
+      <div flex offset="15">Préférences</div>
+    </md-list-item>
+    <md-list-item class="md-1-line" ng-click="Alert()">
+      <div><md-icon md-font-set="material-icons">power_settings_new</md-icon></div>
+      <div flex offset="15">Déconnexion</div>
+    </md-list-item>
   </md-list>
-
 </md-content>
