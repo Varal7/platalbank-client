@@ -1,27 +1,46 @@
 <md-content>
-  <md-list>
-    <md-list-item class="md-1-line" ng-click="navbar.navigateTo('home',$event)">
-      <div><md-icon md-font-set="material-icons">home</md-icon></div>
-      <div flex offset="15">Accueil</div>
-    </md-list-item>
-    <md-list-item class="md-1-line" ng-click="navbar.toggleDisplay($event)">
-      <div><md-icon md-font-set="material-icons">star_rate</md-icon></div>
-      <div flex offset="15">Binets</div>
-    </md-list-item>
+  <md-list class=link-list>
+    <md-item>
+      <md-item-content>
+        <md-button ng-click="navbar.navigateTo('home',$event)">
+          <md-icon md-font-set="material-icons">home</md-icon>
+          <span class=link-label>Accueil</span>
+        </md-button>
+      <md-item-content>
+    </md-item>
+    <md-item>
+      <md-item-content>
+        <md-button ng-click="navbar.toggleDisplay($event)">
+          <md-icon md-font-set="material-icons">star_rate</md-icon>
+          <span class=link-label>Binets</span>
+        </md-button>
+      <md-item-content>
+    </md-item>
       <md-list flex offset="10" ng-show="navbar.showBinets">
-        <md-list-item class="md-1-line"  ng-repeat="binet in navbar.binets" ng-click="navbar.navigateTo(binet.name,$event)">
-          <div><img width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.name}}" /></div>
-          <div flex offset="10">{{binet.name}}</div>
-          <div class="balance" flex="15">{{binet.balance}}</div>
-        </md-list-item>
+        <md-item  ng-repeat="binet in navbar.binets">
+          <md-item-content>
+            <md-button ng-click="navbar.navigateTo(binet.name,$event)">
+              <img class="link-logo"width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.name}}" /></div>
+              <span class="link-label"> {{binet.name}} </span>
+              <span class="balance" flex="15">{{binet.balance}}</span>
+            </md-button>
+          <md-item-content>
+        </md-item>
       </md-list>
-    <md-list-item class="md-1-line" ng-click="navbar.navigateTo('settings',$event)">
-      <div><md-icon md-font-set="material-icons">settings</md-icon></div>
-      <div flex offset="15">Préférences</div>
-    </md-list-item>
-    <md-list-item class="md-1-line" ng-click="navbar.navigateTo('logout',$event)">
-      <div><md-icon md-font-set="material-icons">power_settings_new</md-icon></div>
-      <div flex offset="15">Déconnexion</div>
-    </md-list-item>
+      <md-item>
+        <md-item-content>
+          <md-button ng-click="navbar.navigateTo('settings',$event)">
+            <md-icon md-font-set="material-icons">settings</md-icon>
+            <span class=link-label>Préférences</span>
+          </md-button>
+        <md-item-content>
+      </md-item>
+      <md-item-content>
+        <md-button ng-click="navbar.navigateTo('lgout',$event)">
+          <md-icon md-font-set="material-icons">power_settings_new</md-icon>
+          <span class=link-label>Déconnexion</span>
+        </md-button>
+      <md-item-content>
+    </md-item>
   </md-list>
 </md-content>

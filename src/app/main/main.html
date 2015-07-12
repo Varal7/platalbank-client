@@ -4,10 +4,10 @@
     </div>
 </div>
 
-<div layout="row" >
-    <div flex="25">
+<div layout="row" flex class="content-wrapper">
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" >
       <navbar />
-    </div>
-    <div flex ui-view>
+    </md-sidenav>
+    <div ui-view>
     </div>
 </div>

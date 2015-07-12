@@ -1,7 +1,22 @@
-.acme-navbar-text{
-  color: white;
-}
-
 .balance{
   text-align: right;
+  position:absolute;
+  right:30px;
+}
+
+.link-list, .md-button{
+    width:100%;
+    text-align:left;
+    display:inline-block;
+  }
+
+.link-logo{
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height:30px;
+}
+
+.link-label{
+  margin-left:25px;
 }
