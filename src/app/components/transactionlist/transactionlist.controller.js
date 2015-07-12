@@ -6,7 +6,7 @@
     .controller('TransactionlistController', TransactionlistController);
 
   /** @ngInject */
-  function TransactionlistController($scope) {
+  function TransactionlistController() {
     var _this = this;
     this.transactions = [
       {
