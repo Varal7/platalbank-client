@@ -9,8 +9,11 @@
   function NavBarController($mdDialog) {
     var _this = this;
 
-    _this.binets = [{name: 'BR', balance:'2000', logo:''},
-                    {name:'BB', balance:'20', logo:''}];
+    _this.binets = [{longname: 'Binet Réseau', shortname: 'BR', balance:'2000', logo:''},
+                    {longname:'Binet Binouze', shortname:'Binouze', balance:'20', logo:''},
+                    {longname:'Subaïsse', shortname:'subaisse', balance:'-443', logo:''},
+                    {longname:'JTX', shortname:'JTX', balance:'12833', logo:''},
+                    {longname:'Cabinet Start-up', shortname:'cabinet_start_up', balance:'3', logo:''}];
     _this.showBinets = true;
   _this.navigateTo = function(to, event) {
       $mdDialog.show(

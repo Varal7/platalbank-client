@@ -9,9 +9,9 @@
       <div flex offset="15">Binets</div>
     </md-list-item>
       <md-list flex offset="10" ng-show="navbar.showBinets">
-        <md-list-item class="md-1-line"  ng-repeat="binet in navbar.binets" ng-click="navbar.navigateTo(binet.name,$event)">
-          <img width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.name}}" />
-          <p>{{binet.name}}</p>
+        <md-list-item class="md-1-line"  ng-repeat="binet in navbar.binets" ng-click="navbar.navigateTo(binet.shortname,$event)">
+          <img width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.shortname}}" />
+          <p>{{binet.longname}}</p>
           {{binet.balance}}€
         </md-list-item>
       </md-list>
