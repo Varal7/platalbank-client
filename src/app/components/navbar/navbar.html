@@ -19,10 +19,10 @@
       <md-list flex offset="10" ng-show="navbar.showBinets">
         <md-item  ng-repeat="binet in navbar.binets">
           <md-item-content>
-            <md-button ng-click="navbar.navigateTo(binet.name,$event)">
-              <img class="link-logo"width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.name}}" /></div>
-              <span class="link-label"> {{binet.name}} </span>
-              <span class="balance">{{binet.balance}}</span>
+            <md-button ng-click="navbar.navigateTo(binet.shortname,$event)">
+              <img class="link-logo"width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.shortname}}" /></div>
+              <span class="link-label"> {{binet.longname}} </span>
+              <span class="balance" flex="15">{{binet.balance}}</span>
             </md-button>
           <md-item-content>
         </md-item>
