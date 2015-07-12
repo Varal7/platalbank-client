@@ -6,13 +6,13 @@
     .controller('NavbarController', NavBarController);
 
   /** @ngInject */
-  function NavBarController($scope,$mdDialog) {
+  function NavBarController($mdDialog) {
     var _this = this;
 
     _this.binets = [{name: 'BR', balance:'2000', logo:''},
                     {name:'BB', balance:'20', logo:''}];
     _this.showBinets = true;
-  $scope.navigateTo = function(to, event) {
+  _this.navigateTo = function(to, event) {
       $mdDialog.show(
         $mdDialog.alert()
           .title('Navigating')
@@ -22,7 +22,7 @@
           .targetEvent(event)
       );
     }
-    $scope.toggleDisplay = function(event){
+    _this.toggleDisplay = function(event){
       _this.showBinets=!_this.showBinets;
     }
 
