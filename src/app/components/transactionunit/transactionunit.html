@@ -1,0 +1,18 @@
+<md-list-item class="md-3-line" ng-click="toggleDisplay($event)">
+  <img src="{{ t.creatorPic }}" class="md-avatar" alt="{{ t.creator }}" />
+  <div flex>
+    <div class="md-list-item-text">
+      <h3>{{ t.name }}</h3>
+      <h4>{{ t.date }}</h4>
+      <p>Créé par {{ t.creator }}{{ t.eventName ? " pour " + t.eventName : "" }}</p>
+    </div>
+  </div>
+  <div ng-show="parent.showme" flex="15">
+    <div ng-repeat="(user, amount) in t.operations">
+      {{ user }}: {{ amount }}€<br />
+    </div>
+  </div>
+  <div flex="10">
+    <md-button class="md-raised" ng-class="t.amount >= 0 ? 'md-primary' : 'md-warn'">{{ t.amount }}</md-button>
+  </div>
+</md-list-item>
