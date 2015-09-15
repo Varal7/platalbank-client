@@ -82,5 +82,10 @@
         ]
       }
     ];
+    _this.showTransactions = true;
+    _this.toggleDisplay = function(event)
+	{
+		_this.showTransactions = !_this.showTransactions;
+	}
   }
 })();
