@@ -1,7 +1,7 @@
 <md-content>
   <section ng-repeat="data in tl.transactions">
-    <md-subheader class="md-primary" ng-click = "tl.toggleDisplay(data.name)">{{ data.name }}</md-subheader>
-    <md-list layout-padding ng-show = "tl.showTransactions">
+    <md-subheader class="md-primary" ng-click="{{list-[data.name]}}=!{{list-[data.name]}}">{{ data.name }}</md-subheader>
+    <md-list ng-attr-id="{{'list-' + data.name}}"layout-padding ng-show="!{{list-[data.name]}}">
       <div ng-repeat="t in data.transactions">
         <md-divider />
         <transactionunit creator-pic="t.creatorPic" creator="t.creator" name="t.name" date="t.date" event-name="t.eventName" operations="t.operations" amount="t.amount" />
