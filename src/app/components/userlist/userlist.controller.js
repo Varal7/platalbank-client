@@ -29,6 +29,10 @@
       {
         user: "GénéK",
         amount: -20
+      },
+      {
+        user: "TEST",
+        amount: 2015
       }
     ]
   }
