@@ -34,6 +34,20 @@
         user: "TEST",
         amount: 2015
       }
-    ]
+    ];
+    this.list_order = 'user';
+    
+    this.negative = function(test)
+    {
+        return function(item)
+        {
+          if(test == "all")
+            return item;
+          else
+            if(item.amount < 0)
+              return item;
+      
+        }
+    };
   }
 })();

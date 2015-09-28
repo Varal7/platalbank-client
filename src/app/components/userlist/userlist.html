@@ -1,14 +1,52 @@
 <md-content>
-	<section ng-repeat="data in userlist.userlist">
-		<md-list-item class="md-3-line" ng-click="">
-			<img src="{{ data.creatorPic }}" class="md-avatar" alt="{{ data.creator }}" />
-			<div flex>
-				{{ data.user }}
-			</div>
-			<div flex="10">
-    			<md-button class="md-raised" ng-class="data.amount >= 0 ? 'md-primary' : 'md-warn'">{{ data.amount }}</md-button>
-  			</div>
-		</md-list-item>
-		
-	</section>
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>Type</label>
+	    <md-select ng-model="test">
+	      <md-option value="all" selected> All </md-option>
+	      <md-option value="negative"> Negative </md-option>
+	    </md-select>
+    </md-input-container>
+  
+    <md-input-container flex>
+      <label>Research<md-icon md-font-set="material-icons">search</md-icon></label>
+      <input ng-model="research">
+    </md-input-container> 
+  </div>
+  
+  
+  
+  <md-list layout-padding>
+    <md-list-item class="md-1-line">
+      <div ng-click="reverse = userlist.list_order == 'user' ? !reverse : false; userlist.list_order = 'user'" flex> 
+        Nom
+        <md-icon md-font-set="material-icons">swap_vert</md-icon>
+      </div>
+      <div ng-click="reverse = userlist.list_order == 'pseudo' ? !reverse : false; userlist.list_order = 'pseudo'" flex>
+        Pseudo
+        <md-icon md-font-set="material-icons">swap_vert</md-icon>
+      </div>
+      <div ng-click="reverse = userlist.list_order == 'amount' ? !reverse : false; userlist.list_order = 'amount'" flex="15">
+        Solde
+        <md-icon md-font-set="material-icons">swap_vert</md-icon>
+      </div>
+    </md-list-item>  
+     
+    <div ng-repeat="data in userlist.userlist | filter:research| filter:userlist.negative(test) |orderBy:userlist.list_order:reverse" ng-click="userlist.gotoUser()">
+      <md-divider />
+      <md-list-item class="md-1-line" ng-click="toggleDisplay($event)">
+      <div flex>
+        <img src="{{ data.creatorPic }}" class="md-avatar" alt="{{ data.creator }}" />
+	      {{ data.user }}
+      </div>
+      <div flex>
+      
+      </div>
+      <div flex="15">
+        <md-button class="md-raised" ng-class="data.amount >= 0 ? 'md-primary' : 'md-warn'">{{ data.amount }}</md-button>
+      </div>
+      </md-list-item>
+    </div>
+  </md-list>
+  
 </md-content>
